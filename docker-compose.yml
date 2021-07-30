@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  flask_application_image:
+    build: .
+#    command: gunicorn --bind 0.0.0.0:5000 wsgi:app
+#    command: python3 app.py
+    volumes:
+      - .:/code/
+    ports:
+      - "5000:5000"
